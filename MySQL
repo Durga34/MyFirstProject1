@@ -6,3 +6,7 @@ Ans: SELECT cname,rating FROM customers WHERE cnum IN(SELECT cnum FROM orders WH
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 3.Write a simple division program 15/0 and giving a result of "rest of code" instead of getting infinity of numbers
 Ans: 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4.Find total amount in orders for each salesperson for whom this total is greater than the amount of the largest order in the table.
+Ans: select * from customers where rating>200;
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
