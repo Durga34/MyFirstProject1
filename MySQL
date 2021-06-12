@@ -1,4 +1,4 @@
-1.Obtain all orders for the customer named Cisnerous.(Assume you don't know his customer n0.(cnum)).
+1.Obtain all orders for the customer named Cisnerous.(Assume you don't know his customer no.(cnum)).
 Ans: SELECT onum "ALL ORDERS", cnum FROM orders WHERE cnum=(SELECT cnum FROM customers WHERE cname='cisnerous');
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 2.Produce the names and rating of all customers who have above average orders.
@@ -10,3 +10,16 @@ Ans:
 4.Find total amount in orders for each salesperson for whom this total is greater than the amount of the largest order in the table.
 Ans: select * from customers where rating>200;
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5.Find all customers with order on 3rd oct.
+Ans: select * from orders where odate='1996-03-10';
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+6.Find names and numbers of all salesperson who have more than one customer.
+Ans: select a.snum,b.sname,count(*) as cust_count from customer a,salespeople b where a.snum=b.snum group by a.snum;
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+7.Check if the correct salesperson was credited with each sale.
+Ans: 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+8.Find all orders with above average amounts for their customers.
+Ans: select a.cname,b.amt from customer a,orders b where a.cnum=b.cnum and amt>(select avg(amt) as amt from orders) group by cname;
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+9.Find the sums of the amounts from order table grouped by date,
