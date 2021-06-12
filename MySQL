@@ -1,1 +1,8 @@
-
+1.Obtain all orders for the customer named Cisnerous.(Assume you don't know his customer n0.(cnum)).
+Ans: SELECT onum "ALL ORDERS", cnum FROM orders WHERE cnum=(SELECT cnum FROM customers WHERE cname='cisnerous');
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2.Produce the names and rating of all customers who have above average orders.
+Ans: SELECT cname,rating FROM customers WHERE cnum IN(SELECT cnum FROM orders WHERE amt>(SELECT avg(amt) FROM orders));
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3.Write a simple division program 15/0 and giving a result of "rest of code" instead of getting infinity of numbers
+Ans: 
