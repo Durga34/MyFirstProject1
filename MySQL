@@ -22,4 +22,36 @@ Ans:
 8.Find all orders with above average amounts for their customers.
 Ans: select a.cname,b.amt from customer a,orders b where a.cnum=b.cnum and amt>(select avg(amt) as amt from orders) group by cname;
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-9.Find the sums of the amounts from order table grouped by date,
+9.Find the sums of the amounts from order table grouped by date, eliminating all those dates where the sum was not atleast 2000 above the maximum amount.
+Ans: select odate,sum(amt) from orders group by odate;
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+10.Find names and numbers of all customers with ratings equal to the maximum for their city.
+Ans: 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+11.Find all salespeople who have customers in their cities who they don't service.(Both way using join and correlated subquery.)
+Ans: select a.sname,a.snum,b.city from orders a left outer join customer b on a.snum=b.snum;
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+12.Extract cnum,cname and city from customer table if and only if one or more of the customers in the table are located in san jose.
+Ans: 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+13.Find salespeople no. who have multiple customers.
+Ans:
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+14.Find salespeople number,name and city who have multiple customers.
+Ans:
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+15.Find salespeople who serve only one customer.
+Ans:
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+16.Extract rows of all salespeople with more than one current order.
+Ans:
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+17.Find all salespeople who have customers with a rating of 300.(use EXISTS)
+Ans:
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+18.Find all salespeople who have customers with a rating of 300.(use Join)
+Ans:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+19.Select all salespeople with customers located in their cities who are not assigned to them.(use EXISTS)
+Ans:
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
