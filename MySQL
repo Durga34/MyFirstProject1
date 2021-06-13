@@ -5,7 +5,7 @@ Ans: SELECT onum "ALL ORDERS", cnum FROM orders WHERE cnum=(SELECT cnum FROM cus
 Ans: SELECT cname,rating FROM customers WHERE cnum IN(SELECT cnum FROM orders WHERE amt>(SELECT avg(amt) FROM orders));
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 3.Write a simple division program 15/0 and giving a result of "rest of code" instead of getting infinity of numbers
-Ans: 
+Ans:
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 4.Find total amount in orders for each salesperson for whom this total is greater than the amount of the largest order in the table.
 Ans: select * from customers where rating>200;
@@ -32,19 +32,19 @@ Ans:
 Ans: select a.sname,a.snum,b.city from orders a left outer join customer b on a.snum=b.snum;
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 12.Extract cnum,cname and city from customer table if and only if one or more of the customers in the table are located in san jose.
-Ans: 
+Ans: select cnum,cname and city from customer where(select count(*) from customer where city='san jose')>1; 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 13.Find salespeople no. who have multiple customers.
-Ans:
+Ans: select a.sname,b.cname from salespeople a,customer b where a.snum=b.snum limit 4;
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 14.Find salespeople number,name and city who have multiple customers.
 Ans:
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 15.Find salespeople who serve only one customer.
-Ans:
+Ans: select a.sname,a.snum from salespeople a,(select snum,count(*) as cust_count from customer group b snum having cust_count=1) b where a.snum=b.snum;
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 16.Extract rows of all salespeople with more than one current order.
-Ans:
+Ans: 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 17.Find all salespeople who have customers with a rating of 300.(use EXISTS)
 Ans:
@@ -85,3 +85,31 @@ Ans:
  29.Find all orders for amounts greater than any for the customers in London.
  Ans:
  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+30.Find all salespeople and customers located in london.
+Ans:
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+31.For every salesperson, dates on which highest and lowest orders were brought.
+Ans:
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+32.List all of the salespeople and indicate those who don't have customers in their cities as well as those who do have.
+Ans:
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+33.Append strings to the selected fields, indicating whether or not a given salesperson was matched to a customer in his city.
+Ans:
+34.Create a union of two queries that shows the names, cities and ratings of all customers. Those with a rating of 200 or greater will also have the words 'High Rating',while the others will have the words 'Low Rating';
+Ans:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+35.Write command that produces the name and number of each salesperson and each customer with more than one current order.Put the result in alphabetical order.
+Ans:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+36.Form a union of three queries. Have the first select the snums of all salespeople in San Jose,then second the cnums of all customers in San Jose and the third the onums of all orders on oct 3.Retain duplicates between the last two queries,but eliminates and redundancies between either of them and the first.
+Ans:
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+37.Produce all the salesperson in London who had atleast one customer there.
+Ans:
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+38.Produce all the salesperson in London who did not have customers there.
+Ans:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+39.We want to see salespeople matched to their customers without excluding those salesperson who were not currently assigned to any customers.(Use OUTER join and UNION)
+Ans:
