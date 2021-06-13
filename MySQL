@@ -55,3 +55,33 @@ Ans:
 19.Select all salespeople with customers located in their cities who are not assigned to them.(use EXISTS)
 Ans:
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+20.Extract from customers table every customer assigned the a salesperson who currently has atleast one other customer(besides the customer being selected) with orders in order table.
+Ans:
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+21.Find salespeople with customers located in their cities(using both ANY and IN).
+Ans:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+22.Find all salespeople for whom there are customers that follow them in alphabetical order.(Using ANY and EXISTS)
+Ans:
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+23.Select customers who have a greater rating than any customer in rome.
+ Ans:
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 24.Select all orders that had amounts that were greater that atleast one of the orders from oct 6th.
+ Ans:
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 25.Find all orders with amounts smaller than any amount for a customer in san jose.(Both using ANY and without ANY)
+ Ans:
+ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 26.Select those customers whose ratings are higher than every customer in pairs.(Using both ALL and NOT EXISTS).
+ Ans:
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 27.Select all customers whose ratings are equal to or greater than ANY of the seeres.
+ Ans:
+ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 28.Find all salespeople who have no customers located in their city.(Both using ANY and ALL)
+ Ans:
+ ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 29.Find all orders for amounts greater than any for the customers in London.
+ Ans:
+ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
