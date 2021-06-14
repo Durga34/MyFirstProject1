@@ -1,14 +1,14 @@
 1.Obtain all orders for the customer named Cisnerous.(Assume you don't know his customer no.(cnum)).
-Ans: SELECT onum "ALL ORDERS", cnum FROM orders WHERE cnum=(SELECT cnum FROM customers WHERE cname='cisnerous');
+Ans: SELECT onum,odate from orders where cnum=(select cnum from cust where cname='Cisnerous');
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 2.Produce the names and rating of all customers who have above average orders.
-Ans: SELECT cname,rating FROM customers WHERE cnum IN(SELECT cnum FROM orders WHERE amt>(SELECT avg(amt) FROM orders));
+Ans: SELECT cname,rating FROM cust WHERE cnum IN(SELECT cnum FROM orders WHERE amt>(SELECT avg(amt) FROM orders));
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 3.Write a simple division program 15/0 and giving a result of "rest of code" instead of getting infinity of numbers
 Ans: SELECT 15 DIV 0 where n0=infinity;
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 4.Find total amount in orders for each salesperson for whom this total is greater than the amount of the largest order in the table.
-Ans: select * from customers where rating>200;
+Ans: select snum,sum(amt) from orders group by snum having sum(amt)>(select max(amt) from orders);
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 5.Find all customers with order on 3rd oct.
 Ans: select * from orders where odate='1996-03-10';
