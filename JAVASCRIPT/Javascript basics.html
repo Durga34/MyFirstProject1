@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Javascript comments</h2>
+<p id="demo"></p>
+<p>Click the button to reverse the order of the elements in the array</p>
+<button onclick="myFunction()">Try it</button>
+<p id="demo1"</p>
+<p>Click the button to loop through the properties of an object.</p>
+
+<button onclick="myFunction()">Click here</button>
+
+<p id="demo2"></p>
+<h2>JavaScript Objects</h2>
+
+<p>There are two different ways to access an object property.</p>
+
+<p>You can use person.property or person["property"].</p>
+
+<p id="demo3"></p>
+<p id="demo4"></p>
+<h2>With "use strict":</h2>
+<h3>Using a variable without declaring it, is not allowed.</h3>
+
+<p>Activate debugging in your browser (F12) to see the error report.</p>
+<p id="demo5"></p>
+<p id="demo7"></p>
+<p id="demo6"></p>
+<h2>JavaScript Getters and Setters</h2>
+
+<p>Getters and setters allow you to get and set object properties via methods.</p>
+
+<p>This example uses a lang property to get the value of the language property:</p>
+
+<p id="demo8"></p>
+<p id="demo9"></p>
+<h2>JavaScript Objects</h2>
+
+<p>Using an object constructor:</p>
+
+<p id="demo10"></p>
+
+<script>
+/* The code below will add two variables and store the value in y*/
+var x=5; //declare x
+var y=x+2; //declare y
+document.getElementById("demo").innerHTML=y;
+var fruits=["Banana","Orange","Apple","Mango"];
+document.getElementById("demo1").innerHTML=fruits;
+function myFunction(){
+fruits.reverse();
+document.getElementById("demo1").innerHTML=fruits;}
+function myFunction() {
+  var person = {fname:"Durga", lname:"A", age:21}; 
+  var text = "";
+  var x;
+  for (x in person) {
+    text += person[x] + " ";
+  }
+  document.getElementById("demo2").innerHTML = text;
+}
+var person = {
+  firstName: "Durga",
+  lastName : "A",
+  id     :  5566
+};
+// Display some data from the object:
+document.getElementById("demo3").innerHTML =
+person.firstName + " " + person.lastName;
+var person = {
+  firstName: "Durga",
+  lastName : "A",
+  id     :  5566
+};
+// Display some data from the object:
+document.getElementById("demo3").innerHTML =
+person["firstName"] + " " + person["lastName"];
+x = 5; 
+
+elem = document.getElementById("demo4"); 
+elem.innerHTML = x;           
+
+var x; 
+"use strict";
+x = 3.14;  // This will cause an error (x is not defined).</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<button>Hide</button>
+<script>
+const myObject = {
+  firstName:"Divya",
+  lastName: "D",
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+document.getElementById("demo5").innerHTML = myObject.fullName();
+</script>
+<script>
+const person = {
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+</script>
+<script>
+const person1 = {
+  firstName:"Durga",
+  lastName: "A"
+}
+
+document.getElementById("demo7").innerHTML = person.fullName.apply(person1); 
+</script>
+<script>
+let counter = 0;
+
+// Function to increment counter
+function add() {
+  counter += 1;
+}
+
+// Call add() 3 times
+add();
+add();
+add();
+
+// The counter should now be 3
+document.getElementById("demo6").innerHTML = "The counter is: " + counter;
+</script>
+const person = {
+  firstName: "Durga",
+  lastName: "A",
+  language: "en",
+  get lang() {
+    return this.language;
+  }
+};
+
+// Display data from the object using a getter:
+document.getElementById("demo8").innerHTML = person.lang;
+person.lang = "en";
+
+// Display data from the object:
+document.getElementById("demo9").innerHTML = person.language;
+
+</script>
+<script>
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
+
+const myFather = new Person("John", "Doe", 50, "blue");
+const myMother = new Person("Sally", "Rally", 48, "green");
+
+document.getElementById("demo10").innerHTML =
+"My father is " + myFather.age + ". My mother is " + myMother.age; 
+</script>
+
+
+</body>
+</html>
