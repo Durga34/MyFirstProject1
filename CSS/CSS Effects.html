@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.krishna{
+width: 250px;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+text-align:center}
+div.container{
+padding: 10px;
+}
+.move{cursor: move;}<br><br>
+div{
+width: 100px;
+height: 100px;
+background-color: red;
+position: relative;
+animation-name: animation1;
+animation-duration: 4;
+animation-iteration-count: 3;
+}
+@keyframes example{
+0% {background-color:red;left:0px;top:0px;}
+50%{background-color:blue;left:200px;top:200px;}
+100%{background-color:red;left:0px;top:0px;}
+}
+.pagination{
+display: inline-block;
+}
+.pagination a{
+color: black;
+float: left;
+padding: 8px 16px;
+text-decoration: none;
+}
+.pagination a.active{background-color: #4CAF50;
+color: white;
+}
+.pagination a:hover:not(.active)
+{background-color: #ddd;}
+div.static{ position: static;
+border: 3px solid green;
+}
+div.relative{position: relative;
+left: 30px;
+border: 3px solid blue;
+overflow: scroll;
+}
+div.fixed{position: fixed;
+bottom: 0;
+right:0;
+width: 300px;
+border: 3px solid pink;
+overflow: scroll;
+}
+div.absolute{position: absolute;
+top: 80px;
+right=0;
+width: 200px;
+height: 100px;
+border: 3px solid grey;
+}
+div.sticky{
+position: -webkit-sticky;
+position: sticky;
+top:0;
+background-color: yellow;
+border: 2px solid black;
+}
+img{
+opacity: 0.5;
+}
+</style>
+</head>
+<body>
+<h2>Krishna Image</h2>
+<p>The box-shadow property can be used to create paper-like cards</p>
+<div class="krishna">
+<img src="img_krishna.jpg" alt="Krishna" style="width:100%">
+<div class="container">
+<p>Lord Krishna</p>
+</div>
+</div>
+<p class="move">Move cursor</p>
+<p>css animations</p>
+<div></div>
+<h2>Hoverable pagination</h2>
+<div class="pagination">
+<a href="#">&laquo;</a>
+<a href="#">1</a>
+<a class="active" href="#">2</a>
+<a href="#">3</a>
+<a href="#">4</a>
+<a href="#">&raquo;</a><br>
+<h2>position: static</h2>
+<div class ="static">
+The div element has position static</div><br>
+<h2>position: relative</h2>
+<div class="relative">
+The div element has position relative</div>
+<h2>position: fixed</h2>
+<div class="fixed">
+The div element has position fixed</div>
+<h2>position: absolute</h2>
+<div class="absolute">
+The div element has position absolute</div>
+<h2>position: sticky</h2>
+<div class="sticky">
+The div element has position sticky</div>
+<h1>Image Transparency</h1>
+<img src="img_krishna.jpg" alt="Lord" width="170" height="100">
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table{
+border-collapse: collapse;
+width: 100%;
+}
+th, td{
+padding: 8px;
+text-align: left;
+border-bottom: 10px solid black;
+}
+tr.collapse{
+visibility: collapse;
+}
+tr:hover{background-color: blue;}
+h2.a{
+visibility: visible;
+}
+h2.b{
+visibility: hidden;
+}
+p{color: red;}
+p.ex1{display: none;}
+p.ex2{display: inline;}
+p.ex3{display: block;}
+.a{
+display: contents;
+border: 1px solid red;
+background-color: lightgrey;
+padding: 10px;
+width: 200px;
+}
+.b{
+border: 1px solid blue;
+background-color: lightblue;
+padding: 10px;
+}
+.c{
+background-color: green;
+display: list-item;
+}
+div{
+padding: 70px;
+border: 1px solid #4CAF50;
+}
+div{
+margin:60px;
+border: 1px solid #4CAF50;
+}
+#ex1{
+border: 1px solid black;
+background: url(img_krishna.jpg);
+background-size: 100px 80px;
+bakground-repeat: no-repeat;
+padding: 15px;
+}
+</style>
+</head>
+<body>
+<h2>Hoverable table</h2>
+<p>Move the mouse over the table rows to see the effect.</p>
+<table>
+<tr>
+<th>First Name</th>
+<th>Last Name</th>
+</tr>
+<tr class="collapse">
+<td>Durga</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Divya</td>
+<td>D</td>
+</tr>
+</table>
+<h1>The Visible property</h1>
+<h2 class="a">This heading is visible</h2>
+<h2 class="b">This heading is hidden</h2>
+<h1>The display property</h1>
+<h2>display: none:</h2>
+<div>The display property 
+<p class="ex1">none </p>
+was executed.</div>
+<h2>display: inline:</h2>
+<div>
+The display property 
+<p class="ex2">inline</p>
+was executed.</div>
+<h2>display: block:</h2>
+<div>
+The display property
+<p class="ex3">block</p>
+was executed.</div>
+<h2>display: contents:</h2>
+<div class="a">
+The display property
+<div class="b">contents</div>
+was executed.</div><br>
+<div class="c">The display property list items was executed</div><br>
+<a href="#top">Go to top of page</a>
+<a href="#bottom">Go to bottom of page</a><br>
+<h2>css padding</h2>
+<div>This element has a padding of 70px.</div>
+<h2>css margin</h2>
+<div>This element has a margin of 70px.</div>
+<div id="ex1">
+<h1>Multiple image background</h1>
+<p>It can be specified using either the individual background properties or the background shorthand property</p>
+</body>
+</html>
